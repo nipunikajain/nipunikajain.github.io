@@ -77,22 +77,21 @@ section{padding:64px 0}
 .glance .k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
 .glance .v{font-weight:500;margin-top:6px}
 
-.cases{display:grid;grid-template-columns:minmax(0,1fr);gap:28px}
-.cs{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--surface)}
-.cs:nth-child(even) .vis{order:2}
-.vis{position:relative;display:flex;align-items:center;justify-content:center;padding:36px;min-height:340px;background:var(--tint)}
-.vis svg{width:100%;max-width:400px;height:auto;display:block}
+.cases{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
+.cs{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--surface)}
+.vis{position:relative;display:flex;align-items:center;justify-content:center;padding:28px 28px 22px;min-height:250px;background:var(--tint)}
+.vis svg{width:100%;max-width:380px;height:auto;display:block}
 .vis .lbl{fill:var(--ink)} .vis .sub{fill:var(--muted)} .vis .ink2{fill:var(--ink-2)}
 .vis .ln{stroke:var(--ink-2)} .vis .box{fill:var(--surface);stroke:var(--line)} .vis .acc{fill:var(--series)} .vis .track{fill:var(--track)}
 .vis .accs{stroke:var(--series)} .vis .trk{stroke:var(--track)}
-.cs .txt{padding:40px 44px;display:flex;flex-direction:column;justify-content:center}
+.cs .txt{padding:26px 28px 28px;display:flex;flex-direction:column;flex:1}
 .cs .tag{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:14px;display:flex;align-items:center;gap:10px}
 .cs .tag img{width:18px;height:18px;border-radius:5px}
-.cs h3{font-size:clamp(20px,2.2vw,26px);letter-spacing:-.02em;margin-bottom:12px}
-.cs .lede{color:var(--ink-2);font-size:15px}
-.cs .kpis{display:flex;gap:28px;margin-top:22px;padding-top:18px;border-top:1px solid var(--line)}
+.cs h3{font-size:20px;letter-spacing:-.02em;margin-bottom:10px}
+.cs .lede{color:var(--ink-2);font-size:14.5px}
+.cs .kpis{display:flex;gap:22px;margin-top:auto;padding-top:18px;border-top:1px solid var(--line);padding-top:16px;margin-top:20px}
 .cs .kpis div{font-size:13px;color:var(--muted)}
-.cs .kpis b{display:block;font-size:22px;font-weight:600;letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums;margin-bottom:2px}
+.cs .kpis b{display:block;font-size:20px;font-weight:600;letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums;margin-bottom:2px}
 .cs details{margin-top:18px}
 .cs summary{cursor:pointer;font-size:14px;color:var(--ink-2);list-style:none;display:inline-flex;align-items:center;gap:8px}
 .cs summary::-webkit-details-marker{display:none}
@@ -100,7 +99,7 @@ section{padding:64px 0}
 .cs details[open] summary::before{content:"–"}
 .cs .body{display:grid;gap:12px;margin-top:14px;font-size:14px;color:var(--ink-2)}
 .cs .body b{display:block;color:var(--ink);font-weight:500;margin-bottom:2px}
-.t-blue{--tint:color-mix(in srgb,#2a78d6 9%,var(--bg))} .t-violet{--tint:color-mix(in srgb,#7c5cff 9%,var(--bg))} .t-teal{--tint:color-mix(in srgb,#1e8f8a 10%,var(--bg))}
+.t-blue{--tint:color-mix(in srgb,#2a78d6 9%,var(--bg))} .t-amber{--tint:color-mix(in srgb,#e9a23b 10%,var(--bg))} .t-violet{--tint:color-mix(in srgb,#7c5cff 9%,var(--bg))} .t-teal{--tint:color-mix(in srgb,#1e8f8a 10%,var(--bg))}
 
 .tl{position:relative}
 .tl-item{display:grid;grid-template-columns:120px 28px 1fr;gap:0 20px;padding:0 0 36px}
@@ -184,9 +183,8 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
   .glance>div+div{padding-left:16px}
   .glance>div:nth-child(3){border-left:0;padding-left:0;border-top:1px solid var(--line)}
   .glance>div:nth-child(4){border-top:1px solid var(--line)}
-  .cs{grid-template-columns:minmax(0,1fr)}
-  .cs:nth-child(even) .vis{order:0}
-  .vis{min-height:0;padding:28px}
+  .cases{grid-template-columns:minmax(0,1fr)}
+  .vis{min-height:0;padding:24px}
   .cs .txt{padding:26px 24px 28px}
   .cs .kpis{gap:18px;flex-wrap:wrap}
   .grid,.charts{grid-template-columns:minmax(0,1fr)}
@@ -234,7 +232,7 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
 </div>
 
 <section id="cases">
-  <div class="sec"><div><div class="eyebrow">01</div><h2>Selected case studies</h2></div><p class="sub">Three pieces of work, each with the problem, what I did, and the number that moved.</p></div>
+  <div class="sec"><div><div class="eyebrow">01</div><h2>Shipped at work</h2></div><p class="sub">Four projects, each with the problem, what I did, and the number that moved.</p></div>
   <div class="cases">
 
     <article class="cs t-blue">
@@ -296,12 +294,45 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
         <div class="tag"><img src="img/logos/infoblox.png" alt="">Infoblox IQ · 2026</div>
         <h3>Letting customers embed the assistant in their own agent stacks</h3>
         <p class="lede">Enterprise SOC teams wanted Infoblox IQ inside Slack and ServiceNow workflows, not in another console. I drove the MCP agent endpoint that made that possible.</p>
-        <div class="kpis"><div><b>MCP</b>endpoint shipped</div><div><b>97%</b>of inference cost traced to QA</div><div><b>1st</b>customer-level AI COGS model</div></div>
+        <div class="kpis"><div><b>MCP</b>endpoint shipped</div><div><b>2</b>auth defects caught in review</div><div><b>K8s</b>SOC proof of concept</div></div>
         <details><summary>Problem, approach, outcome</summary>
           <div class="body">
             <div><b>Problem</b>No way for customer agents to call Infoblox IQ with per-user identity and safe writes.</div>
             <div><b>What I did</b>Defined tool contracts, execution flows, per-user OAuth and human-approved writes. Reviewed authorization behaviour against the implementation and caught a defect that allowed access when checks failed, then a regression that blocked legitimate access.</div>
-            <div><b>Outcome</b>Validated a Slack → IQ → ServiceNow SOC proof of concept on Kubernetes. Built the first customer-level AI COGS model, which showed QA traffic was 97% of measured inference cost.</div>
+            <div><b>Outcome</b>Validated a Slack → IQ → ServiceNow SOC proof of concept on Kubernetes, with per-user identity and approval-gated writes.</div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <article class="cs t-amber">
+      <div class="vis">
+        <svg viewBox="0 0 400 230" role="img" aria-label="97 percent of measured inference cost came from QA traffic, 3 percent from customers">
+          <g font-family="Inter,system-ui,sans-serif">
+            <text x="20" y="40" class="lbl" font-size="12" font-weight="500">Measured inference cost, by source</text>
+            <rect x="20" y="58" width="360" height="26" rx="6" class="track"/>
+            <rect x="20" y="58" width="347" height="26" rx="6" class="acc"/>
+            <rect x="369" y="58" width="11" height="26" rx="4" fill="var(--line-strong,#cfc8b8)"/>
+            <text x="32" y="76" fill="#fff" font-size="12" font-weight="600">QA traffic · 97%</text>
+            <text x="380" y="104" text-anchor="end" class="sub" font-size="11">customers · 3%</text>
+            <text x="20" y="150" class="lbl" font-size="12" font-weight="500">Scope</text>
+            <rect x="20" y="162" width="92" height="24" rx="12" class="box" stroke-width="1"/><text x="66" y="178" text-anchor="middle" class="ink2" font-size="11">Cloud</text>
+            <rect x="120" y="162" width="104" height="24" rx="12" class="box" stroke-width="1"/><text x="172" y="178" text-anchor="middle" class="ink2" font-size="11">On-premises</text>
+            <rect x="232" y="162" width="148" height="24" rx="12" class="box" stroke-width="1"/><text x="306" y="178" text-anchor="middle" class="ink2" font-size="11">Per-customer attribution</text>
+            <text x="20" y="218" class="sub" font-size="11">Inputs to pricing, packaging and margin decisions</text>
+          </g>
+        </svg>
+      </div>
+      <div class="txt">
+        <div class="tag"><img src="img/logos/infoblox.png" alt="">Infoblox IQ · 2026</div>
+        <h3>Finding where the AI spend actually goes</h3>
+        <p class="lede">Nobody could say what a customer's AI usage cost to serve. I built the first customer-level cost model across cloud and on-premises deployments, and the answer changed the pricing conversation.</p>
+        <div class="kpis"><div><b>97%</b>of inference cost was QA traffic</div><div><b>1st</b>customer-level AI COGS model</div><div><b>2</b>deployment models covered</div></div>
+        <details><summary>Problem, approach, outcome</summary>
+          <div class="body">
+            <div><b>Problem</b>No attribution of inference cost to customers or traffic sources, so pricing, packaging and margin decisions were being made blind.</div>
+            <div><b>What I did</b>Built the first customer-level AI COGS model across cloud and on-premises deployments, traced measured inference cost back to its sources, and documented the attribution gaps.</div>
+            <div><b>Outcome</b>Showed that QA traffic accounted for 97% of measured inference cost, and turned the gaps into concrete inputs for pricing, packaging and margins.</div>
           </div>
         </details>
       </div>
@@ -404,7 +435,7 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
 </section>
 
 <section id="projects" style="padding-top:0">
-  <div class="sec"><div><div class="eyebrow">03</div><h2>Side projects</h2></div><p class="sub">Things I build and measure outside work.</p></div>
+  <div class="sec"><div><div class="eyebrow">03</div><h2>Side projects</h2></div><p class="sub">Built and measured outside work.</p></div>
   <div class="grid">
     <a class="tile wide" href="https://nipunikajain.github.io/agent-harness-experiments/">
       <img class="shot" src="img/radar.jpg" alt="Agent Research Radar dashboard">
