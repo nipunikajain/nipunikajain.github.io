@@ -71,14 +71,20 @@ nav>.wrap>*{pointer-events:auto}
 .links a.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 
 section{padding:64px 0}
-.glance{display:grid;grid-template-columns:1fr 2fr 1fr 1fr;gap:16px;margin-top:-34px;position:relative;z-index:2}
-.gc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px -20px rgba(0,0,0,.25)}
-.gc .k{display:flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
-.gc .k svg{width:16px;height:16px;stroke:var(--series);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
-.gc .v{font-weight:500;font-size:15px;line-height:1.4}
-.gc .v small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
-.gc .chips{display:flex;flex-wrap:wrap;gap:6px}
-.gc .chips span{font-size:13px;padding:5px 11px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--ink)}
+.glance{margin-top:-34px;position:relative;z-index:2;background:var(--surface);border:1px solid var(--line);border-radius:20px;overflow:hidden;box-shadow:0 1px 2px rgba(0,0,0,.04),0 16px 40px -24px rgba(0,0,0,.3)}
+.facts{display:grid;grid-template-columns:1.25fr 1fr 1fr}
+.fact{display:flex;gap:14px;align-items:flex-start;padding:22px 26px}
+.fact+.fact{border-left:1px solid var(--line)}
+.fact .ic{flex:none;width:38px;height:38px;border-radius:11px;background:var(--track);display:grid;place-items:center}
+.fact .ic svg{width:18px;height:18px;stroke:var(--series);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.fact .k{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:4px}
+.fact .v{font-weight:500;font-size:15px;line-height:1.35}
+.fact .v small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:3px}
+.focus{display:flex;align-items:center;gap:18px;padding:14px 26px;border-top:1px solid var(--line);background:color-mix(in srgb,var(--bg) 60%,var(--surface))}
+.focus .k{flex:none;display:flex;align-items:center;gap:8px;font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.focus .k svg{width:16px;height:16px;stroke:var(--series);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.focus .chips{display:flex;flex-wrap:wrap;gap:6px}
+.focus .chips span{font-size:13px;padding:5px 11px;border-radius:999px;background:var(--surface);border:1px solid var(--line);color:var(--ink)}
 
 .cases{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
 .cs{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--surface)}
@@ -188,8 +194,11 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
   .edu-grid{grid-template-columns:1fr}
   .hero .wrap{grid-template-columns:1fr;gap:36px;padding-top:40px;padding-bottom:56px;min-height:0}
   .hero .photo{order:-1;justify-self:start;width:176px;aspect-ratio:1/1;border-radius:18px}
-  .glance{grid-template-columns:1fr 1fr;gap:12px;margin-top:-20px}
-  .gc.wide{grid-column:1/-1}
+  .glance{margin-top:-20px}
+  .facts{grid-template-columns:1fr}
+  .fact{padding:16px 18px}
+  .fact+.fact{border-left:0;border-top:1px solid var(--line)}
+  .focus{align-items:flex-start;flex-direction:column;gap:10px;padding:14px 18px}
   .cases{grid-template-columns:minmax(0,1fr)}
   .vis{min-height:0;padding:24px}
   .cs .txt{padding:26px 24px 28px}
@@ -232,10 +241,15 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
 
 <div class="wrap">
 <div class="glance">
-  <div class="gc"><div class="k"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>Now</div><div class="v">Senior AI Product Manager<small>Infoblox IQ · AI assistant &amp; agent platform</small></div></div>
-  <div class="gc wide"><div class="k"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>Focus</div><div class="chips"><span>AI agents &amp; MCP</span><span>Evals &amp; guardrails</span><span>0→1 products</span><span>Enterprise SaaS</span><span>Platform &amp; APIs</span><span>Pricing &amp; COGS</span><span>Data &amp; ML systems</span><span>Go-to-market</span></div></div>
-  <div class="gc"><div class="k"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5M22 9v6"/></svg>Education</div><div class="v">MBA, UBC Sauder<small>B.Tech, NMIMS Mumbai</small></div></div>
-  <div class="gc"><div class="k"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Location</div><div class="v">Vancouver, BC<small>Eligible to work in Canada</small></div></div>
+  <div class="facts">
+    <div class="fact"><div class="ic"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg></div><div><div class="k">Now</div><div class="v">Senior AI Product Manager, Infoblox<small>Infoblox IQ · AI assistant &amp; agent platform</small></div></div></div>
+    <div class="fact"><div class="ic"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5M22 9v6"/></svg></div><div><div class="k">Education</div><div class="v">MBA, UBC Sauder<small>B.Tech, NMIMS Mumbai</small></div></div></div>
+    <div class="fact"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></div><div><div class="k">Location</div><div class="v">Vancouver, BC<small>Eligible to work in Canada</small></div></div></div>
+  </div>
+  <div class="focus">
+    <div class="k"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>Focus</div>
+    <div class="chips"><span>AI agents &amp; MCP</span><span>Evals &amp; guardrails</span><span>0→1 products</span><span>Enterprise SaaS</span><span>Platform &amp; APIs</span><span>Pricing &amp; COGS</span><span>Data &amp; ML systems</span><span>Go-to-market</span></div>
+  </div>
 </div>
 
 
