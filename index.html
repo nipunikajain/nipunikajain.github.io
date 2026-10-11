@@ -1,50 +1,326 @@
-        </div>
-        <div class="skill">
-          <h3>Operating Systems</h3>
-          <ul>
-            <li>Linux, Windows</li>
-          </ul>
-        </div>
-      </div>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Nipunika Jain</title>
+<meta name="description" content="Nipunika Jain. AI product manager, end to end: find the gap, define the problem, build the solution, get it adopted. Senior AI PM at Infoblox, Vancouver.">
+<meta property="og:title" content="Nipunika Jain — AI Product Manager">
+<meta property="og:description" content="End to end: find the gap, define the problem, build the solution, get it adopted. Experiments, null results, deployed demos.">
+<meta property="og:image" content="https://github.com/nipunikajain.png">
+<meta property="og:url" content="https://nipunikajain.github.io/">
+<link rel="icon" href="https://github.com/nipunikajain.png">
+<style>
+:root{
+  --bg:#faf8f3;--surface:#ffffff;--ink:#1c1b19;--ink-2:#4a4741;--muted:#7a756b;
+  --line:#e3ded2;--line-strong:#cfc8b8;--accent:#b4451f;--accent-soft:#f6e3da;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  color-scheme:light;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#141311;--surface:#1d1b18;--ink:#eeeae0;--ink-2:#c9c4b8;--muted:#918b7f;
+    --line:#2f2c27;--line-strong:#454138;--accent:#e8906a;--accent-soft:#3a2a22;color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#141311;--surface:#1d1b18;--ink:#eeeae0;--ink-2:#c9c4b8;--muted:#918b7f;
+  --line:#2f2c27;--line-strong:#454138;--accent:#e8906a;--accent-soft:#3a2a22;color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:72px}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans)}
+a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
+a:hover{border-bottom-color:currentColor}
+h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;margin:0}
+h1{font-size:clamp(34px,6vw,52px);letter-spacing:-.01em}
+h2{font-size:clamp(24px,3.5vw,30px);margin-bottom:20px}
+h3{font-size:18px}
+p{margin:0 0 14px}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+nav .wrap{display:flex;align-items:center;gap:18px;height:56px;overflow-x:auto;white-space:nowrap}
+nav a{color:var(--ink-2);font-size:14px;border:0}
+nav a:hover{color:var(--ink)}
+nav .name{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:17px;margin-right:auto}
+nav button{margin-left:6px;background:none;border:1px solid var(--line-strong);color:var(--ink-2);border-radius:999px;padding:4px 10px;font:inherit;font-size:13px;cursor:pointer}
+header.hero{padding:72px 0 48px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
+header.hero img{width:132px;height:132px;border-radius:50%;object-fit:cover;border:3px solid var(--surface);box-shadow:0 2px 12px rgba(0,0,0,.12)}
+.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
+.lede{font-size:19px;color:var(--ink-2);max-width:620px;margin-top:18px}
+.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.links a{display:inline-block;padding:7px 14px;border:1px solid var(--line-strong);border-radius:999px;font-size:14px;color:var(--ink)}
+.links a.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+section{padding:40px 0;border-top:1px solid var(--line)}
+.now{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:12px;padding:18px 20px;margin-top:8px}
+.now strong{color:var(--accent)}
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
+.step .n{font-family:var(--mono);font-size:12px;color:var(--accent);margin-bottom:6px}
+.step h3{font-size:17px;margin-bottom:8px}
+.step p{font-size:14px;color:var(--ink-2);margin:0}
+.proj{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px}
+.card h3 a{color:var(--ink)}
+.card .meta{font-family:var(--mono);font-size:12px;color:var(--muted)}
+.card p{font-size:15px;color:var(--ink-2);margin:0;flex:1}
+.card .cta{font-size:14px}
+.card .cta a+a{margin-left:12px}
+.findings{width:100%;border-collapse:collapse;font-size:15px;margin-top:6px}
+.findings th,.findings td{text-align:left;vertical-align:top;padding:12px 10px;border-top:1px solid var(--line)}
+.findings th{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;border-top:0}
+.findings td:last-child{white-space:nowrap;color:var(--muted)}
+.job{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
+.job:first-of-type{border-top:0;padding-top:4px}
+.job .when{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:4px}
+.job h3{margin-bottom:2px}
+.job .org{color:var(--ink-2);font-size:15px;margin-bottom:10px}
+.job ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:15px}
+.job li{margin-bottom:5px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+.two h3{margin-bottom:10px}
+.two ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:15px}
+.two li{margin-bottom:6px}
+.stack{display:grid;grid-template-columns:160px 1fr;gap:8px 16px;font-size:15px;color:var(--ink-2)}
+.stack dt{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:3px}
+.stack dd{margin:0}
+footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
+footer .links{margin-top:0;margin-bottom:16px}
+@media (max-width:720px){
+  header.hero{grid-template-columns:1fr;padding-top:40px}
+  header.hero img{width:96px;height:96px;order:-1}
+  .steps{grid-template-columns:1fr 1fr}
+  .proj,.two{grid-template-columns:1fr}
+  .job{grid-template-columns:1fr;gap:4px}
+  .stack{grid-template-columns:1fr}
+  .findings td:last-child{white-space:normal}
+}
+@media (max-width:420px){.steps{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="wrap">
+  <a class="name" href="#top">Nipunika Jain</a>
+  <a href="#how">How I work</a>
+  <a href="#work">Projects</a>
+  <a href="#experience">Experience</a>
+  <a href="#writing">Writing</a>
+  <a href="#contact">Contact</a>
+  <button id="theme" aria-label="Toggle dark mode">☾</button>
+</div></nav>
+
+<div class="wrap" id="top">
+<header class="hero">
+  <div>
+    <div class="kicker">AI Product Manager · Vancouver</div>
+    <h1>I find the gap, define the problem, build the solution, and get it adopted.</h1>
+    <p class="lede">Senior AI Product Manager at Infoblox, on Infoblox IQ, an AI assistant and agent platform for enterprise networking and security. Ten years from ML engineering to AI product, then an MBA at UBC Sauder. I build agentic systems, then measure whether they actually work.</p>
+    <div class="links">
+      <a class="primary" href="https://www.linkedin.com/in/nipunikajain">LinkedIn</a>
+      <a href="https://github.com/nipunikajain">GitHub</a>
+      <a href="https://github.com/nipunikajain/NipunikaJain/raw/main/Nipunika_Jain_CV.pdf">CV (PDF)</a>
+      <a href="mailto:nipunikajain@gmail.com">Email</a>
     </div>
-  </section>
-  <section class="experience" id="experience">
-    <div class="container">
-      <h2>Experience</h2>
-      <div class="experience-list">
-        <!-- Add experience items here -->
-        <div class="experience-item">
-          <h3>Senior Consultant - Analytics & Cognitive</h3>
-          <h4>Deloitte | Pune, India / Remote</h4>
-          <p>08/2022 – Present</p>
-        </div>
-        <div class="experience-item">
-          <h3>Senior Data Scientist</h3>
-          <h4>Aioneers Technologies India Pvt. Ltd | Pune, India / non - Remote</h4>
-          <p>04/2021 – 08/2022</p>
-        </div>
-        <div class="experience-item">
-          <h3>Technical Engineer - Data Science</h3>
-          <h4>Ecolab Food, Safety & Hygiene Solution Pvt. Ltd. | Pune, India /non- Remote</h4>
-          <p>07/2019 – 04/2021</p>
-        </div>
-        <div class="experience-item">
-          <h3>Application Development Analyst</h3>
-          <h4>Accenture Solutions Pvt. Ltd | Pune, India / non-Remote</h4>
-          <p>07/2014 – 07/2019</p>
-        </div>
-      </div>
+  </div>
+  <img src="https://github.com/nipunikajain.png?size=264" alt="Nipunika Jain" width="132" height="132">
+</header>
+
+<section id="now" style="border-top:0;padding-top:0">
+  <div class="now"><strong>Now.</strong> At Infoblox: guardrails, MCP agent endpoints and GA readiness for Infoblox IQ. Outside work: building <a href="https://github.com/nipunikajain/mcp-harness">mcp-harness</a>, an agent-assisted MCP server builder, and running the <a href="https://nipunikajain.github.io/agent-harness-experiments/">Agent Research Radar</a>, a daily scout that has queued 191 agent papers and techniques to test.</div>
+</section>
+
+<section id="how">
+  <h2>How I work</h2>
+  <div class="steps">
+    <div class="step"><div class="n">01</div><h3>Find the gap</h3><p>Read production conversations, cost data and customer calls until the real problem shows up. At Infoblox I tested 41 agent threads and filed 13 triaged defects before writing a line of spec.</p></div>
+    <div class="step"><div class="n">02</div><h3>Define the problem</h3><p>Turn it into requirements, acceptance criteria and a number to move. Guardrail block accuracy at 74% was the number; ~94% was the target.</p></div>
+    <div class="step"><div class="n">03</div><h3>Build the solution</h3><p>Prototype it myself when that is faster than a deck. A two-pass, context-aware LLM classifier went from proof of concept to production enforcement with engineering, data and security.</p></div>
+    <div class="step"><div class="n">04</div><h3>Get it adopted</h3><p>GA readiness across 30+ epics, FAQs and docs, a COGS model finance can use. Shipping is when customers use it, not when it merges.</p></div>
+  </div>
+</section>
+
+<section id="work">
+  <h2>Projects</h2>
+  <div class="proj">
+    <div class="card">
+      <div class="meta">python · modal · claude api · live dashboard</div>
+      <h3><a href="https://github.com/nipunikajain/agent-harness-experiments">agent-harness-experiments</a></h3>
+      <p>Controlled reproductions of agent-engineering claims on one shared harness: multiple seeds, real dollar costs, and write-ups that say so when a claim does not replicate.</p>
+      <div class="cta"><a href="https://github.com/nipunikajain/agent-harness-experiments">Repo</a><a href="https://nipunikajain.github.io/agent-harness-experiments/">Research Radar</a></div>
     </div>
-  </section>
-  <footer>
-    <div class="container">
-      <p>&copy; 2023 Nipunika Jain | All Rights Reserved</p>
-      <p>
-        <a href="https://www.linkedin.com/in/nipunikajain/" target="_blank">LinkedIn</a> |
-        <a href="https://github.com/nipunikajain" target="_blank">Github</a> |
-        <a href="https://medium.com/@nipunikajain" target="_blank">Blog</a>
-      </p>
+    <div class="card">
+      <div class="meta">next.js · fastapi · langgraph · deployed</div>
+      <h3><a href="https://github.com/nipunikajain/comp-intel-agent">comp-intel-agent</a></h3>
+      <p>An end-to-end agentic product: company URL in, competitor discovery, parallel scrape and extract, SWOT, battlecards and change alerts out.</p>
+      <div class="cta"><a href="https://github.com/nipunikajain/comp-intel-agent">Repo</a><a href="https://comp-intel-agent.vercel.app">Live demo</a></div>
     </div>
-  </footer>
+    <div class="card">
+      <div class="meta">python · model context protocol · in progress</div>
+      <h3><a href="https://github.com/nipunikajain/mcp-harness">mcp-harness</a></h3>
+      <p>API spec and task in, proposed MCP tools out, then a generated and tested integration. The reference order-status integration runs today.</p>
+      <div class="cta"><a href="https://github.com/nipunikajain/mcp-harness">Repo</a></div>
+    </div>
+    <div class="card">
+      <div class="meta">notebooks · 2023</div>
+      <h3><a href="https://github.com/nipunikajain/ExperimentsWithLLM">ExperimentsWithLLM</a></h3>
+      <p>LoRA fine-tuning of BLOOM-7b1, Segment Anything, Dolly, receipt-image Q&amp;A, an SEC-filings chatbot. Where this started.</p>
+      <div class="cta"><a href="https://github.com/nipunikajain/ExperimentsWithLLM">Repo</a></div>
+    </div>
+  </div>
+
+  <h3 style="margin-top:36px;margin-bottom:4px">Findings so far</h3>
+  <table class="findings">
+    <thead><tr><th>Claim tested</th><th>What I found</th><th>Spent</th></tr></thead>
+    <tbody>
+      <tr><td>A structured long-running-agent harness (Anthropic's post) beats a naive loop</td><td><strong>No benefit reproduced</strong> across three setups, including a ~500-line SQL engine with 30 interacting features. Structured cost 1.7 to 8.3× the tokens for no quality gain; zero regressions in 12 runs either way. <a href="https://github.com/nipunikajain/agent-harness-experiments/blob/master/experiments/2026-06-db-harness/notes.md">Notes</a></td><td>~$13</td></tr>
+      <tr><td>TokenPilot cuts agent cost 56 to 87%</td><td><strong>Replicates against the paper's own baseline</strong> (−69%), but about four fifths of that is just turning on prompt caching. Net context-management win: −28%. <a href="https://github.com/nipunikajain/agent-harness-experiments/blob/master/experiments/2026-07-tokenpilot/notes.md">Notes</a></td><td>$1.64</td></tr>
+    </tbody>
+  </table>
+</section>
+
+<section id="experience">
+  <h2>Experience</h2>
+
+  <div class="job">
+    <div class="when">May 2026 – now<br>Vancouver</div>
+    <div>
+      <h3>Senior AI Product Manager</h3>
+      <div class="org">Infoblox · Infoblox IQ, AI assistant and agent platform for enterprise networking and security</div>
+      <ul>
+        <li>Took AI guardrail block accuracy from 74% to ~94% with a two-pass, context-aware LLM classifier, and drove it from proof of concept to production enforcement.</li>
+        <li>Drove an MCP agent endpoint so customers can embed Infoblox IQ in their own agent stacks: tool contracts, execution flows, per-user OAuth, human-approved writes. Validated a Slack-to-IQ-to-ServiceNow SOC proof of concept on Kubernetes.</li>
+        <li>Reviewed MCP authorization behaviour against the implementation and caught a defect that allowed access when authorization checks failed, then a regression that blocked legitimate access.</li>
+        <li>Led GA readiness across 30+ epics spanning agents, actions, guardrails and observability.</li>
+        <li>Built the first customer-level AI COGS model across cloud and on-premises; found QA traffic was 97% of measured inference cost.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="when">May – Jul 2025<br>Vancouver</div>
+    <div>
+      <h3>Product Manager</h3>
+      <div class="org">Sage Intelligent Time · time tracking for law and accounting firms billing in six-minute increments</div>
+      <ul>
+        <li>Led discovery for an agentic alternative to legacy time entry: working prototype, customer validation, unit economics showing 3× ROI and 60% fewer billing errors.</li>
+        <li>Cut competitive research from 10 days to 2 by mapping the workflow and shipping a working demo from a low-fidelity prototype.</li>
+        <li>Defined the three-year AI roadmap from customer feedback, usage analytics and a benchmark of 21 tools.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="when">2022 – 2024<br>Pune</div>
+    <div>
+      <h3>Senior Consultant, Product &amp; AI</h3>
+      <div class="org">Deloitte · embedded with enterprise teams in fintech, banking and pharma</div>
+      <ul>
+        <li>Delivered an enterprise RAG system from concept to scaled deployment in four weeks for banking and pharma clients, leading three engineers.</li>
+        <li>Cut the unclassified complaint rate in a regulated pipeline from 11% to 5% with hallucination thresholds, a labelled eval set and prompt regression checks.</li>
+        <li>Reduced API response times 30× and unblocked a 25-person operations team by driving a gRPC migration across eight APIs in two months with zero downstream breakage.</li>
+        <li>Mentored six analysts on LLM architecture trade-offs and model evaluation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="when">2021 – 2022<br>Pune</div>
+    <div>
+      <h3>Product Manager &amp; Senior Data Scientist</h3>
+      <div class="org">Aioneers · supply-chain SaaS, demand forecasting and inventory optimisation</div>
+      <ul>
+        <li>Shipped a self-serve AI forecasting product from zero to one, generating €200K ARR, and cut time-to-value from six weeks to five days.</li>
+        <li>Raised forecast accuracy from 22% to 70% across 1,000 product time series with LightGBM, reducing client safety stock by 20%.</li>
+        <li>Reclaimed 20% of engineering capacity across three teams by taking ownership of a shared internal library.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="when">2019 – 2021<br>Pune</div>
+    <div>
+      <h3>Technical Engineer, Data Science</h3>
+      <div class="org">Ecolab</div>
+      <ul>
+        <li>Built an end-to-end data platform from SAP HANA to Azure (Data Factory, Databricks, CI/CD) with Power BI dashboards; cut processing time 60% and enabled 100 daily supply-chain reports.</li>
+        <li>Saved $110K a year with warehouse optimisation and ranking models that replaced manual space allocation.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="job">
+    <div class="when">2014 – 2019<br>Mumbai</div>
+    <div>
+      <h3>Application Development Analyst</h3>
+      <div class="org">Accenture · data science and analytics for enterprise clients</div>
+      <ul>
+        <li>Standardised the production path with a project scaffold, CI/CD and environment-based config, adopted by 80% of five data science teams.</li>
+        <li>Lifted client sales 22% and vendor-model accuracy 25% with predictive analytics for retail clients.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="two" style="margin-top:28px">
+    <div>
+      <h3>Education</h3>
+      <ul>
+        <li>MBA, UBC Sauder School of Business, 2026. Asia's Top Talent Scholarship. President, Product &amp; Service Management Club.</li>
+        <li>B.Tech, Electronics &amp; Telecommunications, NMIMS Mumbai, 2014. Founder, Right on Track, a student-led nonprofit.</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Certifications</h3>
+      <ul>
+        <li>AWS Certified Machine Learning Specialty</li>
+        <li>Technical Product Management, PMI</li>
+        <li>A2A: Agent2Agent Protocol, DeepLearning.AI</li>
+        <li>AI Agents Evaluation, Maven</li>
+        <li>LLMs Mastery and MLOps Bootcamp, Udemy</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section id="stack">
+  <h2>Stack</h2>
+  <dl class="stack">
+    <dt>AI &amp; orchestration</dt><dd>Claude, OpenAI, Gemini APIs · LangGraph, LangChain · MCP, A2A · RAG pipelines · prompt engineering · model evaluation and HITL frameworks · Claude Code, Cursor</dd>
+    <dt>Product</dt><dd>Road mapping, PRDs, OKRs · A/B testing · Figma · activation and adoption metrics · go-to-market for AI features</dd>
+    <dt>Platforms</dt><dd>FastAPI, gRPC, REST · Docker, Kubernetes · CI/CD · Modal · Python, SQL, TypeScript, React</dd>
+    <dt>Data &amp; cloud</dt><dd>Azure (Databricks, Data Factory) · AWS (SageMaker, Lambda, Bedrock) · Pinecone · Spark · Power BI</dd>
+    <dt>ML</dt><dd>Time-series forecasting · NLP (DistilBERT, Longformer) · LightGBM, XGBoost · PyTorch · MLflow · drift detection · NIST AI RMF, AI governance</dd>
+  </dl>
+</section>
+
+<section id="writing">
+  <h2>Writing</h2>
+  <p>On <a href="https://medium.com/nimbusniche">medium.com/nimbusniche</a>: the exponential growth of AI compute and NVIDIA Blackwell, CriticGPT and AI-assisted code review, and reducing the CO₂ of AI workloads.</p>
+</section>
+
+<footer id="contact">
+  <div class="links">
+    <a class="primary" href="mailto:nipunikajain@gmail.com">nipunikajain@gmail.com</a>
+    <a href="https://www.linkedin.com/in/nipunikajain">LinkedIn</a>
+    <a href="https://github.com/nipunikajain">GitHub</a>
+    <a href="https://x.com/nipunikajain">X</a>
+    <a href="https://github.com/nipunikajain/NipunikaJain/raw/main/Nipunika_Jain_CV.pdf">CV (PDF)</a>
+  </div>
+  Vancouver, BC · eligible to work in Canada · updated October 2026
+</footer>
+</div>
+
+<script>
+(function(){
+  var b=document.getElementById('theme'),r=document.documentElement;
+  function cur(){try{return localStorage.getItem('theme')}catch(e){return null}}
+  function apply(t){if(t){r.setAttribute('data-theme',t)}else{r.removeAttribute('data-theme')}
+    var dark=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;b.textContent=dark?'☀':'☾'}
+  apply(cur());
+  b.onclick=function(){var dark=r.getAttribute('data-theme')?r.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+    var t=dark?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}apply(t)};
+})();
+</script>
 </body>
 </html>
