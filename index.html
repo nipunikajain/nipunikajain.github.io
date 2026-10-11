@@ -4,299 +4,214 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Nipunika Jain</title>
-<meta name="description" content="Nipunika Jain. AI product manager, end to end: find the gap, define the problem, build the solution, get it adopted. Senior AI PM at Infoblox, Vancouver.">
-<meta property="og:title" content="Nipunika Jain — AI Product Manager">
-<meta property="og:description" content="End to end: find the gap, define the problem, build the solution, get it adopted. Experiments, null results, deployed demos.">
-<meta property="og:image" content="https://github.com/nipunikajain.png">
+<meta name="description" content="Nipunika Jain. Product manager for AI agents. Senior AI PM at Infoblox, Vancouver.">
+<meta property="og:title" content="Nipunika Jain">
+<meta property="og:description" content="Product manager for AI agents. Infoblox IQ. Vancouver.">
+<meta property="og:image" content="https://nipunikajain.github.io/img/radar.jpg">
 <meta property="og:url" content="https://nipunikajain.github.io/">
 <link rel="icon" href="https://github.com/nipunikajain.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
 :root{
-  --bg:#faf8f3;--surface:#ffffff;--ink:#1c1b19;--ink-2:#4a4741;--muted:#7a756b;
-  --line:#e3ded2;--line-strong:#cfc8b8;--accent:#b4451f;--accent-soft:#f6e3da;
-  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,serif;
-  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
-  --mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace;
+  --bg:#fcfcfb;--surface:#ffffff;--ink:#0b0b0b;--ink-2:#52514e;--muted:#8a8984;
+  --line:#e8e7e3;--series:#2a78d6;--track:#e3edf9;
   color-scheme:light;
 }
 @media (prefers-color-scheme:dark){
   :root:not([data-theme="light"]){
-    --bg:#141311;--surface:#1d1b18;--ink:#eeeae0;--ink-2:#c9c4b8;--muted:#918b7f;
-    --line:#2f2c27;--line-strong:#454138;--accent:#e8906a;--accent-soft:#3a2a22;color-scheme:dark;
+    --bg:#0f0f0e;--surface:#1a1a19;--ink:#ffffff;--ink-2:#c3c2b7;--muted:#858480;
+    --line:#2a2a28;--series:#3987e5;--track:#1f2a3a;color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
-  --bg:#141311;--surface:#1d1b18;--ink:#eeeae0;--ink-2:#c9c4b8;--muted:#918b7f;
-  --line:#2f2c27;--line-strong:#454138;--accent:#e8906a;--accent-soft:#3a2a22;color-scheme:dark;
+  --bg:#0f0f0e;--surface:#1a1a19;--ink:#ffffff;--ink-2:#c3c2b7;--muted:#858480;
+  --line:#2a2a28;--series:#3987e5;--track:#1f2a3a;color-scheme:dark;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth;scroll-padding-top:72px}
-body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 var(--sans)}
-a{color:var(--accent);text-decoration:none;border-bottom:1px solid transparent}
-a:hover{border-bottom-color:currentColor}
-h1,h2,h3{font-family:var(--serif);font-weight:600;line-height:1.2;margin:0}
-h1{font-size:clamp(34px,6vw,52px);letter-spacing:-.01em}
-h2{font-size:clamp(24px,3.5vw,30px);margin-bottom:20px}
-h3{font-size:18px}
-p{margin:0 0 14px}
-.wrap{max-width:900px;margin:0 auto;padding:0 20px}
-nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
-nav .wrap{display:flex;align-items:center;gap:18px;height:56px;overflow-x:auto;white-space:nowrap}
-nav a{color:var(--ink-2);font-size:14px;border:0}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{margin:0;background:var(--bg);color:var(--ink);font:15px/1.55 Inter,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;-webkit-font-smoothing:antialiased;letter-spacing:-.005em}
+a{color:inherit;text-decoration:none}
+a.u{text-decoration:underline;text-decoration-color:var(--line);text-underline-offset:3px}
+a.u:hover{text-decoration-color:currentColor}
+h1,h2,h3{margin:0;font-weight:600;letter-spacing:-.02em;line-height:1.15}
+h1{font-size:clamp(36px,6vw,56px)}
+h2{font-size:13px;font-weight:500;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:28px}
+h3{font-size:17px}
+p{margin:0}
+.wrap{max-width:1040px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(10px)}
+nav .wrap{display:flex;align-items:center;gap:22px;height:60px}
+nav a{font-size:14px;color:var(--ink-2)}
 nav a:hover{color:var(--ink)}
-nav .name{font-family:var(--serif);font-weight:600;color:var(--ink);font-size:17px;margin-right:auto}
-nav button{margin-left:6px;background:none;border:1px solid var(--line-strong);color:var(--ink-2);border-radius:999px;padding:4px 10px;font:inherit;font-size:13px;cursor:pointer}
-header.hero{padding:72px 0 48px;display:grid;grid-template-columns:1fr auto;gap:32px;align-items:center}
-header.hero img{width:132px;height:132px;border-radius:50%;object-fit:cover;border:3px solid var(--surface);box-shadow:0 2px 12px rgba(0,0,0,.12)}
-.kicker{font-family:var(--mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--accent);margin-bottom:12px}
-.lede{font-size:19px;color:var(--ink-2);max-width:620px;margin-top:18px}
-.links{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
-.links a{display:inline-block;padding:7px 14px;border:1px solid var(--line-strong);border-radius:999px;font-size:14px;color:var(--ink)}
+nav .brand{font-weight:600;color:var(--ink);margin-right:auto;white-space:nowrap}
+nav button{background:none;border:1px solid var(--line);color:var(--ink-2);border-radius:999px;width:32px;height:32px;font:inherit;cursor:pointer}
+.hero{padding:96px 0 64px;display:grid;grid-template-columns:1fr auto;gap:40px;align-items:start}
+.hero .tag{font-size:clamp(20px,2.6vw,26px);font-weight:500;color:var(--ink-2);margin-top:14px;letter-spacing:-.01em}
+.hero .sub{color:var(--muted);margin-top:22px;max-width:520px}
+.hero img{width:88px;height:88px;border-radius:50%;object-fit:cover;margin-top:10px}
+.links{display:flex;flex-wrap:wrap;gap:8px;margin-top:28px}
+.links a{font-size:14px;padding:8px 14px;border:1px solid var(--line);border-radius:999px;color:var(--ink)}
+.links a:hover{border-color:var(--ink)}
 .links a.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
-section{padding:40px 0;border-top:1px solid var(--line)}
-.now{background:var(--accent-soft);border:1px solid color-mix(in srgb,var(--accent) 30%,transparent);border-radius:12px;padding:18px 20px;margin-top:8px}
-.now strong{color:var(--accent)}
-.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:8px}
-.step{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:16px}
-.step .n{font-family:var(--mono);font-size:12px;color:var(--accent);margin-bottom:6px}
-.step h3{font-size:17px;margin-bottom:8px}
-.step p{font-size:14px;color:var(--ink-2);margin:0}
-.proj{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.card{background:var(--surface);border:1px solid var(--line);border-radius:12px;padding:20px;display:flex;flex-direction:column;gap:8px}
-.card h3 a{color:var(--ink)}
-.card .meta{font-family:var(--mono);font-size:12px;color:var(--muted)}
-.card p{font-size:15px;color:var(--ink-2);margin:0;flex:1}
-.card .cta{font-size:14px}
-.card .cta a+a{margin-left:12px}
-.findings{width:100%;border-collapse:collapse;font-size:15px;margin-top:6px}
-.findings th,.findings td{text-align:left;vertical-align:top;padding:12px 10px;border-top:1px solid var(--line)}
-.findings th{font-family:var(--mono);font-size:12px;font-weight:500;color:var(--muted);text-transform:uppercase;letter-spacing:.06em;border-top:0}
-.findings td:last-child{white-space:nowrap;color:var(--muted)}
-.job{display:grid;grid-template-columns:150px 1fr;gap:20px;padding:22px 0;border-top:1px solid var(--line)}
-.job:first-of-type{border-top:0;padding-top:4px}
-.job .when{font-family:var(--mono);font-size:13px;color:var(--muted);padding-top:4px}
-.job h3{margin-bottom:2px}
-.job .org{color:var(--ink-2);font-size:15px;margin-bottom:10px}
-.job ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:15px}
-.job li{margin-bottom:5px}
-.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
-.two h3{margin-bottom:10px}
-.two ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:15px}
-.two li{margin-bottom:6px}
-.stack{display:grid;grid-template-columns:160px 1fr;gap:8px 16px;font-size:15px;color:var(--ink-2)}
-.stack dt{font-family:var(--mono);font-size:12px;color:var(--muted);padding-top:3px}
-.stack dd{margin:0}
-footer{padding:40px 0 60px;border-top:1px solid var(--line);color:var(--muted);font-size:14px}
-footer .links{margin-top:0;margin-bottom:16px}
-@media (max-width:720px){
-  header.hero{grid-template-columns:1fr;padding-top:40px}
-  header.hero img{width:96px;height:96px;order:-1}
-  .steps{grid-template-columns:1fr 1fr}
-  .proj,.two{grid-template-columns:1fr}
-  .job{grid-template-columns:1fr;gap:4px}
-  .stack{grid-template-columns:1fr}
-  .findings td:last-child{white-space:normal}
+section{padding:56px 0}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stat{padding:28px 20px 28px 0}
+.stat+.stat{padding-left:24px;border-left:1px solid var(--line)}
+.stat .v{font-size:34px;font-weight:600;letter-spacing:-.03em;font-variant-numeric:tabular-nums;line-height:1}
+.stat .l{color:var(--muted);font-size:13px;margin-top:10px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.tile{display:block;border:1px solid var(--line);border-radius:14px;overflow:hidden;background:var(--surface);transition:border-color .15s}
+.tile:hover{border-color:var(--ink-2)}
+.tile.wide{grid-column:1/-1}
+.tile .shot{display:block;width:100%;aspect-ratio:16/9;object-fit:cover;object-position:top;border-bottom:1px solid var(--line)}
+.tile.wide .shot{aspect-ratio:21/9}
+.tile .fig{aspect-ratio:16/9;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:center;padding:24px;background:var(--bg)}
+.tile .fig svg{width:100%;max-width:440px;height:auto}
+.tile .cap{padding:18px 20px 20px;display:flex;justify-content:space-between;gap:16px;align-items:baseline}
+.tile .cap p{color:var(--ink-2);margin-top:4px;font-size:14px}
+.tile .cap .go{white-space:nowrap;font-size:13px;color:var(--muted)}
+.charts{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+.chart{border:1px solid var(--line);border-radius:14px;padding:22px 22px 18px;background:var(--surface)}
+.chart h3{font-size:15px;margin-bottom:2px}
+.chart .sub{color:var(--muted);font-size:13px;margin-bottom:18px}
+.bars{display:grid;grid-template-columns:auto 1fr auto;gap:10px 14px;align-items:center;font-size:13px}
+.bars .k{color:var(--ink-2);white-space:nowrap}
+.bars .t{height:18px;background:var(--track);border-radius:0 4px 4px 0;position:relative}
+.bars .b{position:absolute;left:0;top:0;bottom:0;background:var(--series);border-radius:0 4px 4px 0}
+.bars .n{font-variant-numeric:tabular-nums;color:var(--ink);min-width:52px;text-align:right}
+.chart .note{color:var(--ink-2);font-size:13px;margin-top:16px;padding-top:14px;border-top:1px solid var(--line)}
+.xp{display:grid;grid-template-columns:110px 150px 1fr 1fr;gap:12px 20px;font-size:14px}
+.xp>div{padding:14px 0;border-top:1px solid var(--line)}
+.xp .y{color:var(--muted);font-variant-numeric:tabular-nums}
+.xp .c{font-weight:500}
+.xp .r{color:var(--ink-2)}
+.xp .m{color:var(--ink-2)}
+footer{padding:48px 0 72px;border-top:1px solid var(--line);color:var(--muted);font-size:13px}
+footer .links{margin:0 0 20px}
+@media (max-width:820px){
+  nav .wrap{gap:14px}
+  nav a{font-size:13px}
+  .hero{grid-template-columns:1fr;padding-top:56px}
+  .hero img{order:-1;margin:0}
+  .stats{grid-template-columns:1fr 1fr}
+  .stat{padding:20px 12px 20px 0}
+  .stat+.stat{padding-left:16px}
+  .stat:nth-child(3){border-left:0;padding-left:0;border-top:1px solid var(--line)}
+  .stat:nth-child(4){border-top:1px solid var(--line)}
+  .grid,.charts{grid-template-columns:1fr}
+  .tile.wide .shot{aspect-ratio:16/9}
+  .xp{grid-template-columns:90px 1fr}
+  .xp .r,.xp .m{grid-column:2;padding-top:0;border-top:0;margin-top:-8px}
+  .xp .y{grid-row:span 3}
 }
-@media (max-width:420px){.steps{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
 <nav><div class="wrap">
-  <a class="name" href="#top">Nipunika Jain</a>
-  <a href="#how">How I work</a>
-  <a href="#work">Projects</a>
+  <a class="brand" href="#">Nipunika Jain</a>
+  <a href="#work">Work</a>
   <a href="#experience">Experience</a>
-  <a href="#writing">Writing</a>
   <a href="#contact">Contact</a>
-  <button id="theme" aria-label="Toggle dark mode">☾</button>
+  <button id="theme" aria-label="Toggle theme">◐</button>
 </div></nav>
 
-<div class="wrap" id="top">
+<div class="wrap">
 <header class="hero">
   <div>
-    <div class="kicker">AI Product Manager · Vancouver</div>
-    <h1>I find the gap, define the problem, build the solution, and get it adopted.</h1>
-    <p class="lede">Senior AI Product Manager at Infoblox, on Infoblox IQ, an AI assistant and agent platform for enterprise networking and security. Ten years from ML engineering to AI product, then an MBA at UBC Sauder. I build agentic systems, then measure whether they actually work.</p>
+    <h1>Nipunika Jain</h1>
+    <p class="tag">Product manager for AI agents.</p>
+    <p class="sub">Senior AI PM at Infoblox, building Infoblox IQ. Previously Deloitte, Aioneers, Sage. MBA, UBC Sauder. Vancouver.</p>
     <div class="links">
-      <a class="primary" href="https://www.linkedin.com/in/nipunikajain">LinkedIn</a>
+      <a class="primary" href="mailto:nipunikajain@gmail.com">Email</a>
+      <a href="https://www.linkedin.com/in/nipunikajain">LinkedIn</a>
       <a href="https://github.com/nipunikajain">GitHub</a>
-      <a href="https://github.com/nipunikajain/NipunikaJain/raw/main/Nipunika_Jain_CV.pdf">CV (PDF)</a>
-      <a href="mailto:nipunikajain@gmail.com">Email</a>
+      <a href="https://github.com/nipunikajain/NipunikaJain/raw/main/Nipunika_Jain_CV.pdf">CV</a>
     </div>
   </div>
-  <img src="https://github.com/nipunikajain.png?size=264" alt="Nipunika Jain" width="132" height="132">
+  <img src="https://github.com/nipunikajain.png?size=176" alt="" width="88" height="88">
 </header>
 
-<section id="now" style="border-top:0;padding-top:0">
-  <div class="now"><strong>Now.</strong> At Infoblox: guardrails, MCP agent endpoints and GA readiness for Infoblox IQ. Outside work: building <a href="https://github.com/nipunikajain/mcp-harness">mcp-harness</a>, an agent-assisted MCP server builder, and running the <a href="https://nipunikajain.github.io/agent-harness-experiments/">Agent Research Radar</a>, a daily scout that has queued 191 agent papers and techniques to test.</div>
-</section>
-
-<section id="how">
-  <h2>How I work</h2>
-  <div class="steps">
-    <div class="step"><div class="n">01</div><h3>Find the gap</h3><p>Read production conversations, cost data and customer calls until the real problem shows up. At Infoblox I tested 41 agent threads and filed 13 triaged defects before writing a line of spec.</p></div>
-    <div class="step"><div class="n">02</div><h3>Define the problem</h3><p>Turn it into requirements, acceptance criteria and a number to move. Guardrail block accuracy at 74% was the number; ~94% was the target.</p></div>
-    <div class="step"><div class="n">03</div><h3>Build the solution</h3><p>Prototype it myself when that is faster than a deck. A two-pass, context-aware LLM classifier went from proof of concept to production enforcement with engineering, data and security.</p></div>
-    <div class="step"><div class="n">04</div><h3>Get it adopted</h3><p>GA readiness across 30+ epics, FAQs and docs, a COGS model finance can use. Shipping is when customers use it, not when it merges.</p></div>
-  </div>
-</section>
+<div class="stats">
+  <div class="stat"><div class="v">74→94%</div><div class="l">AI guardrail accuracy, Infoblox IQ</div></div>
+  <div class="stat"><div class="v">€200K</div><div class="l">ARR from a 0→1 forecasting product</div></div>
+  <div class="stat"><div class="v">30×</div><div class="l">Faster APIs after a gRPC migration</div></div>
+  <div class="stat"><div class="v">191</div><div class="l">Agent papers queued to test</div></div>
+</div>
 
 <section id="work">
-  <h2>Projects</h2>
-  <div class="proj">
-    <div class="card">
-      <div class="meta">python · modal · claude api · live dashboard</div>
-      <h3><a href="https://github.com/nipunikajain/agent-harness-experiments">agent-harness-experiments</a></h3>
-      <p>Controlled reproductions of agent-engineering claims on one shared harness: multiple seeds, real dollar costs, and write-ups that say so when a claim does not replicate.</p>
-      <div class="cta"><a href="https://github.com/nipunikajain/agent-harness-experiments">Repo</a><a href="https://nipunikajain.github.io/agent-harness-experiments/">Research Radar</a></div>
+  <h2>Work</h2>
+  <div class="grid">
+    <a class="tile wide" href="https://nipunikajain.github.io/agent-harness-experiments/">
+      <img class="shot" src="img/radar.jpg" alt="Agent Research Radar dashboard">
+      <div class="cap"><div><h3>Agent Research Radar</h3><p>A daily scout queues agent papers. I reproduce the claims and publish what holds.</p></div><span class="go">Live ↗</span></div>
+    </a>
+    <a class="tile" href="https://comp-intel-agent.vercel.app">
+      <img class="shot" src="img/comp-intel.jpg" alt="Competitive intelligence dashboard">
+      <div class="cap"><div><h3>Competitive Intelligence Agent</h3><p>Company URL in. Competitors, SWOT, battlecards out.</p></div><span class="go">Live ↗</span></div>
+    </a>
+    <a class="tile" href="https://github.com/nipunikajain/mcp-harness">
+      <div class="fig">
+        <svg viewBox="0 0 440 160" role="img" aria-label="API spec and task go to a builder agent, which produces a tested MCP server that a consumer agent calls">
+          <defs><marker id="ar" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto"><path d="M0 0L10 5L0 10z" fill="currentColor"/></marker></defs>
+          <g fill="none" stroke="currentColor" stroke-width="1.25" opacity=".85">
+            <rect x="4" y="48" width="112" height="64" rx="10"/>
+            <rect x="164" y="48" width="112" height="64" rx="10"/>
+            <rect x="324" y="48" width="112" height="64" rx="10" stroke-width="2"/>
+            <path d="M116 80H160" marker-end="url(#ar)"/>
+            <path d="M276 80H320" marker-end="url(#ar)"/>
+            <path d="M380 48V22H220" marker-end="url(#ar)" stroke-dasharray="3 3"/>
+          </g>
+          <g fill="currentColor" font-family="Inter,system-ui,sans-serif" font-size="12" text-anchor="middle">
+            <text x="60" y="76">API spec</text><text x="60" y="94" opacity=".6">+ task</text>
+            <text x="220" y="76">Builder agent</text><text x="220" y="94" opacity=".6">proposes tools</text>
+            <text x="380" y="76" font-weight="600">MCP server</text><text x="380" y="94" opacity=".6">generated · tested</text>
+            <text x="220" y="14" opacity=".6">consumer agent calls it</text>
+          </g>
+        </svg>
+      </div>
+      <div class="cap"><div><h3>mcp-harness</h3><p>Point it at an API. Get a tested MCP server. In progress.</p></div><span class="go">Repo ↗</span></div>
+    </a>
+  </div>
+</section>
+
+<section id="findings" style="padding-top:0">
+  <h2>Findings</h2>
+  <div class="charts">
+    <div class="chart">
+      <h3>Structured agent harness vs naive loop</h3>
+      <div class="sub">Tokens per run, structured ÷ naive. Three tasks, 3–6 seeds each.</div>
+      <div class="bars">
+        <span class="k">10-feature toy</span><div class="t" title="8.3× tokens, identical quality"><div class="b" style="width:100%"></div></div><span class="n">8.3×</span>
+        <span class="k">20 features, tight budget</span><div class="t" title="5.9× tokens, 7.7 vs 20 features"><div class="b" style="width:71%"></div></div><span class="n">5.9×</span>
+        <span class="k">SQL engine, 30 features</span><div class="t" title="1.9× tokens, 29.5 vs 30 features"><div class="b" style="width:23%"></div></div><span class="n">1.9×</span>
+      </div>
+      <div class="note">Quality gain: none, in all three. <a class="u" href="https://github.com/nipunikajain/agent-harness-experiments">Notes and configs ↗</a></div>
     </div>
-    <div class="card">
-      <div class="meta">next.js · fastapi · langgraph · deployed</div>
-      <h3><a href="https://github.com/nipunikajain/comp-intel-agent">comp-intel-agent</a></h3>
-      <p>An end-to-end agentic product: company URL in, competitor discovery, parallel scrape and extract, SWOT, battlecards and change alerts out.</p>
-      <div class="cta"><a href="https://github.com/nipunikajain/comp-intel-agent">Repo</a><a href="https://comp-intel-agent.vercel.app">Live demo</a></div>
-    </div>
-    <div class="card">
-      <div class="meta">python · model context protocol · in progress</div>
-      <h3><a href="https://github.com/nipunikajain/mcp-harness">mcp-harness</a></h3>
-      <p>API spec and task in, proposed MCP tools out, then a generated and tested integration. The reference order-status integration runs today.</p>
-      <div class="cta"><a href="https://github.com/nipunikajain/mcp-harness">Repo</a></div>
-    </div>
-    <div class="card">
-      <div class="meta">notebooks · 2023</div>
-      <h3><a href="https://github.com/nipunikajain/ExperimentsWithLLM">ExperimentsWithLLM</a></h3>
-      <p>LoRA fine-tuning of BLOOM-7b1, Segment Anything, Dolly, receipt-image Q&amp;A, an SEC-filings chatbot. Where this started.</p>
-      <div class="cta"><a href="https://github.com/nipunikajain/ExperimentsWithLLM">Repo</a></div>
+    <div class="chart">
+      <h3>TokenPilot, cost per run</h3>
+      <div class="sub">Haiku 4.5, 4-hop agent task, 3 seeds. Accuracy 1.0 in every arm.</div>
+      <div class="bars">
+        <span class="k">No caching</span><div class="t" title="$0.153 per run"><div class="b" style="width:100%"></div></div><span class="n">$0.153</span>
+        <span class="k">Prompt caching on</span><div class="t" title="$0.065 per run"><div class="b" style="width:43%"></div></div><span class="n">$0.065</span>
+        <span class="k">+ TokenPilot</span><div class="t" title="$0.047 per run"><div class="b" style="width:31%"></div></div><span class="n">$0.047</span>
+      </div>
+      <div class="note">The paper's −69% is mostly caching. TokenPilot's own win: −28%. <a class="u" href="https://github.com/nipunikajain/agent-harness-experiments/blob/master/experiments/2026-07-tokenpilot/notes.md">Notes ↗</a></div>
     </div>
   </div>
-
-  <h3 style="margin-top:36px;margin-bottom:4px">Findings so far</h3>
-  <table class="findings">
-    <thead><tr><th>Claim tested</th><th>What I found</th><th>Spent</th></tr></thead>
-    <tbody>
-      <tr><td>A structured long-running-agent harness (Anthropic's post) beats a naive loop</td><td><strong>No benefit reproduced</strong> across three setups, including a ~500-line SQL engine with 30 interacting features. Structured cost 1.7 to 8.3× the tokens for no quality gain; zero regressions in 12 runs either way. <a href="https://github.com/nipunikajain/agent-harness-experiments/blob/master/experiments/2026-06-db-harness/notes.md">Notes</a></td><td>~$13</td></tr>
-      <tr><td>TokenPilot cuts agent cost 56 to 87%</td><td><strong>Replicates against the paper's own baseline</strong> (−69%), but about four fifths of that is just turning on prompt caching. Net context-management win: −28%. <a href="https://github.com/nipunikajain/agent-harness-experiments/blob/master/experiments/2026-07-tokenpilot/notes.md">Notes</a></td><td>$1.64</td></tr>
-    </tbody>
-  </table>
 </section>
 
 <section id="experience">
   <h2>Experience</h2>
-
-  <div class="job">
-    <div class="when">May 2026 – now<br>Vancouver</div>
-    <div>
-      <h3>Senior AI Product Manager</h3>
-      <div class="org">Infoblox · Infoblox IQ, AI assistant and agent platform for enterprise networking and security</div>
-      <ul>
-        <li>Took AI guardrail block accuracy from 74% to ~94% with a two-pass, context-aware LLM classifier, and drove it from proof of concept to production enforcement.</li>
-        <li>Drove an MCP agent endpoint so customers can embed Infoblox IQ in their own agent stacks: tool contracts, execution flows, per-user OAuth, human-approved writes. Validated a Slack-to-IQ-to-ServiceNow SOC proof of concept on Kubernetes.</li>
-        <li>Reviewed MCP authorization behaviour against the implementation and caught a defect that allowed access when authorization checks failed, then a regression that blocked legitimate access.</li>
-        <li>Led GA readiness across 30+ epics spanning agents, actions, guardrails and observability.</li>
-        <li>Built the first customer-level AI COGS model across cloud and on-premises; found QA traffic was 97% of measured inference cost.</li>
-      </ul>
-    </div>
+  <div class="xp">
+    <div class="y">2026 –</div><div class="c">Infoblox</div><div class="r">Senior AI Product Manager</div><div class="m">Guardrails, MCP agent endpoint, GA across 30+ epics</div>
+    <div class="y">2025</div><div class="c">Sage</div><div class="r">Product Manager</div><div class="m">Agentic time entry prototype, 3× ROI case</div>
+    <div class="y">2022 – 24</div><div class="c">Deloitte</div><div class="r">Senior Consultant, Product &amp; AI</div><div class="m">Enterprise RAG in four weeks; gRPC migration, 30× faster</div>
+    <div class="y">2021 – 22</div><div class="c">Aioneers</div><div class="r">PM &amp; Senior Data Scientist</div><div class="m">0→1 forecasting SaaS, €200K ARR</div>
+    <div class="y">2019 – 21</div><div class="c">Ecolab</div><div class="r">Data Science Engineer</div><div class="m">SAP to Azure data platform, −60% processing time</div>
+    <div class="y">2014 – 19</div><div class="c">Accenture</div><div class="r">Data Science Analyst</div><div class="m">Production scaffold adopted by 80% of teams</div>
   </div>
-
-  <div class="job">
-    <div class="when">May – Jul 2025<br>Vancouver</div>
-    <div>
-      <h3>Product Manager</h3>
-      <div class="org">Sage Intelligent Time · time tracking for law and accounting firms billing in six-minute increments</div>
-      <ul>
-        <li>Led discovery for an agentic alternative to legacy time entry: working prototype, customer validation, unit economics showing 3× ROI and 60% fewer billing errors.</li>
-        <li>Cut competitive research from 10 days to 2 by mapping the workflow and shipping a working demo from a low-fidelity prototype.</li>
-        <li>Defined the three-year AI roadmap from customer feedback, usage analytics and a benchmark of 21 tools.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="job">
-    <div class="when">2022 – 2024<br>Pune</div>
-    <div>
-      <h3>Senior Consultant, Product &amp; AI</h3>
-      <div class="org">Deloitte · embedded with enterprise teams in fintech, banking and pharma</div>
-      <ul>
-        <li>Delivered an enterprise RAG system from concept to scaled deployment in four weeks for banking and pharma clients, leading three engineers.</li>
-        <li>Cut the unclassified complaint rate in a regulated pipeline from 11% to 5% with hallucination thresholds, a labelled eval set and prompt regression checks.</li>
-        <li>Reduced API response times 30× and unblocked a 25-person operations team by driving a gRPC migration across eight APIs in two months with zero downstream breakage.</li>
-        <li>Mentored six analysts on LLM architecture trade-offs and model evaluation.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="job">
-    <div class="when">2021 – 2022<br>Pune</div>
-    <div>
-      <h3>Product Manager &amp; Senior Data Scientist</h3>
-      <div class="org">Aioneers · supply-chain SaaS, demand forecasting and inventory optimisation</div>
-      <ul>
-        <li>Shipped a self-serve AI forecasting product from zero to one, generating €200K ARR, and cut time-to-value from six weeks to five days.</li>
-        <li>Raised forecast accuracy from 22% to 70% across 1,000 product time series with LightGBM, reducing client safety stock by 20%.</li>
-        <li>Reclaimed 20% of engineering capacity across three teams by taking ownership of a shared internal library.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="job">
-    <div class="when">2019 – 2021<br>Pune</div>
-    <div>
-      <h3>Technical Engineer, Data Science</h3>
-      <div class="org">Ecolab</div>
-      <ul>
-        <li>Built an end-to-end data platform from SAP HANA to Azure (Data Factory, Databricks, CI/CD) with Power BI dashboards; cut processing time 60% and enabled 100 daily supply-chain reports.</li>
-        <li>Saved $110K a year with warehouse optimisation and ranking models that replaced manual space allocation.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="job">
-    <div class="when">2014 – 2019<br>Mumbai</div>
-    <div>
-      <h3>Application Development Analyst</h3>
-      <div class="org">Accenture · data science and analytics for enterprise clients</div>
-      <ul>
-        <li>Standardised the production path with a project scaffold, CI/CD and environment-based config, adopted by 80% of five data science teams.</li>
-        <li>Lifted client sales 22% and vendor-model accuracy 25% with predictive analytics for retail clients.</li>
-      </ul>
-    </div>
-  </div>
-
-  <div class="two" style="margin-top:28px">
-    <div>
-      <h3>Education</h3>
-      <ul>
-        <li>MBA, UBC Sauder School of Business, 2026. Asia's Top Talent Scholarship. President, Product &amp; Service Management Club.</li>
-        <li>B.Tech, Electronics &amp; Telecommunications, NMIMS Mumbai, 2014. Founder, Right on Track, a student-led nonprofit.</li>
-      </ul>
-    </div>
-    <div>
-      <h3>Certifications</h3>
-      <ul>
-        <li>AWS Certified Machine Learning Specialty</li>
-        <li>Technical Product Management, PMI</li>
-        <li>A2A: Agent2Agent Protocol, DeepLearning.AI</li>
-        <li>AI Agents Evaluation, Maven</li>
-        <li>LLMs Mastery and MLOps Bootcamp, Udemy</li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section id="stack">
-  <h2>Stack</h2>
-  <dl class="stack">
-    <dt>AI &amp; orchestration</dt><dd>Claude, OpenAI, Gemini APIs · LangGraph, LangChain · MCP, A2A · RAG pipelines · prompt engineering · model evaluation and HITL frameworks · Claude Code, Cursor</dd>
-    <dt>Product</dt><dd>Road mapping, PRDs, OKRs · A/B testing · Figma · activation and adoption metrics · go-to-market for AI features</dd>
-    <dt>Platforms</dt><dd>FastAPI, gRPC, REST · Docker, Kubernetes · CI/CD · Modal · Python, SQL, TypeScript, React</dd>
-    <dt>Data &amp; cloud</dt><dd>Azure (Databricks, Data Factory) · AWS (SageMaker, Lambda, Bedrock) · Pinecone · Spark · Power BI</dd>
-    <dt>ML</dt><dd>Time-series forecasting · NLP (DistilBERT, Longformer) · LightGBM, XGBoost · PyTorch · MLflow · drift detection · NIST AI RMF, AI governance</dd>
-  </dl>
-</section>
-
-<section id="writing">
-  <h2>Writing</h2>
-  <p>On <a href="https://medium.com/nimbusniche">medium.com/nimbusniche</a>: the exponential growth of AI compute and NVIDIA Blackwell, CriticGPT and AI-assisted code review, and reducing the CO₂ of AI workloads.</p>
 </section>
 
 <footer id="contact">
@@ -305,20 +220,20 @@ footer .links{margin-top:0;margin-bottom:16px}
     <a href="https://www.linkedin.com/in/nipunikajain">LinkedIn</a>
     <a href="https://github.com/nipunikajain">GitHub</a>
     <a href="https://x.com/nipunikajain">X</a>
-    <a href="https://github.com/nipunikajain/NipunikaJain/raw/main/Nipunika_Jain_CV.pdf">CV (PDF)</a>
+    <a href="https://medium.com/nimbusniche">Writing</a>
   </div>
-  Vancouver, BC · eligible to work in Canada · updated October 2026
+  Vancouver · October 2026
 </footer>
 </div>
 
 <script>
 (function(){
   var b=document.getElementById('theme'),r=document.documentElement;
-  function cur(){try{return localStorage.getItem('theme')}catch(e){return null}}
-  function apply(t){if(t){r.setAttribute('data-theme',t)}else{r.removeAttribute('data-theme')}
-    var dark=t?t==='dark':matchMedia('(prefers-color-scheme: dark)').matches;b.textContent=dark?'☀':'☾'}
-  apply(cur());
-  b.onclick=function(){var dark=r.getAttribute('data-theme')?r.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
+  function get(){try{return localStorage.getItem('theme')}catch(e){return null}}
+  function apply(t){t?r.setAttribute('data-theme',t):r.removeAttribute('data-theme')}
+  apply(get());
+  b.onclick=function(){
+    var dark=r.getAttribute('data-theme')?r.getAttribute('data-theme')==='dark':matchMedia('(prefers-color-scheme: dark)').matches;
     var t=dark?'light':'dark';try{localStorage.setItem('theme',t)}catch(e){}apply(t)};
 })();
 </script>
