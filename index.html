@@ -92,13 +92,20 @@ section{padding:64px 0}
 .cs .kpis{display:flex;gap:22px;margin-top:auto;padding-top:18px;border-top:1px solid var(--line);padding-top:16px;margin-top:20px}
 .cs .kpis div{font-size:13px;color:var(--muted)}
 .cs .kpis b{display:block;font-size:20px;font-weight:600;letter-spacing:-.02em;color:var(--ink);font-variant-numeric:tabular-nums;margin-bottom:2px}
-.cs details{margin-top:18px}
-.cs summary{cursor:pointer;font-size:14px;color:var(--ink-2);list-style:none;display:inline-flex;align-items:center;gap:8px}
-.cs summary::-webkit-details-marker{display:none}
-.cs summary::before{content:"+";display:inline-block;width:20px;height:20px;border:1px solid var(--line);border-radius:999px;text-align:center;line-height:18px;font-size:14px}
-.cs details[open] summary::before{content:"–"}
-.cs .body{display:grid;gap:12px;margin-top:14px;font-size:14px;color:var(--ink-2)}
-.cs .body b{display:block;color:var(--ink);font-weight:500;margin-bottom:2px}
+.cs .more{margin-top:18px;align-self:flex-start;cursor:pointer;font:inherit;font-size:14px;color:var(--ink-2);background:none;border:0;padding:0;display:inline-flex;align-items:center;gap:8px}
+.cs .more::before{content:"+";display:inline-block;width:20px;height:20px;border:1px solid var(--line);border-radius:999px;text-align:center;line-height:18px;font-size:14px;transition:background .15s,color .15s}
+.cs .more:hover{color:var(--ink)} .cs .more:hover::before{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+dialog.cs-dialog{border:1px solid var(--line);border-radius:22px;background:var(--surface);color:var(--ink);padding:0;width:min(680px,calc(100vw - 32px));box-shadow:0 40px 100px -30px rgba(0,0,0,.45)}
+dialog.cs-dialog::backdrop{background:rgba(10,10,10,.45);backdrop-filter:blur(6px)}
+.cs-dialog .inner{padding:32px 36px 36px}
+.cs-dialog .tag{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:12px;display:flex;align-items:center;gap:10px}
+.cs-dialog .tag img{width:18px;height:18px;border-radius:5px}
+.cs-dialog h3{font-size:24px;letter-spacing:-.02em;margin-bottom:22px;padding-right:40px}
+.cs-dialog .body{display:grid;gap:18px;font-size:15px;line-height:1.6;color:var(--ink-2)}
+.cs-dialog .body b{display:block;color:var(--ink);font-weight:500;margin-bottom:4px;font-size:13px;letter-spacing:.04em;text-transform:uppercase}
+.cs-dialog .x{position:absolute;top:18px;right:18px;width:36px;height:36px;border-radius:999px;border:1px solid var(--line);background:var(--bg);color:var(--ink-2);font:inherit;font-size:18px;cursor:pointer}
+.cs-dialog .x:hover{color:var(--ink);border-color:var(--ink)}
+@media (max-width:860px){.cs-dialog .inner{padding:26px 22px 28px} .cs-dialog h3{font-size:20px}}
 .t-blue{--tint:color-mix(in srgb,#2a78d6 9%,var(--bg))} .t-amber{--tint:color-mix(in srgb,#e9a23b 10%,var(--bg))} .t-violet{--tint:color-mix(in srgb,#7c5cff 9%,var(--bg))} .t-teal{--tint:color-mix(in srgb,#1e8f8a 10%,var(--bg))}
 
 .tl{position:relative}
@@ -257,13 +264,12 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
         <h3>Making an AI assistant safe enough to ship to security teams</h3>
         <p class="lede">A context-blind guardrail was blocking legitimate requests and missing risky ones. I redesigned the classifier and drove it from proof of concept to production enforcement.</p>
         <div class="kpis"><div><b>74→94%</b>block accuracy</div><div><b>41</b>agent threads tested</div><div><b>30+</b>epics to GA</div></div>
-        <details><summary>Problem, approach, outcome</summary>
-          <div class="body">
+        <button class="more" type="button">Problem, approach, outcome</button>
+          <div class="body" hidden>
             <div><b>Problem</b>Single-pass guardrail at 74% block accuracy. Customers in regulated environments would not enable the assistant.</div>
             <div><b>What I did</b>Analysed production conversations in Databricks, tested 41 agent threads, filed 13 triaged defects. Specified a two-pass, context-aware LLM classifier and partnered with engineering, data and security from PoC to enforcement.</div>
             <div><b>Outcome</b>~94% block accuracy in production. Unblocked GA readiness across 30+ epics spanning agents, actions, guardrails and observability.</div>
           </div>
-        </details>
       </div>
     </article>
 
@@ -295,13 +301,12 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
         <h3>Letting customers embed the assistant in their own agent stacks</h3>
         <p class="lede">Enterprise SOC teams wanted Infoblox IQ inside Slack and ServiceNow workflows, not in another console. I drove the MCP agent endpoint that made that possible.</p>
         <div class="kpis"><div><b>MCP</b>endpoint shipped</div><div><b>2</b>auth defects caught in review</div><div><b>K8s</b>SOC proof of concept</div></div>
-        <details><summary>Problem, approach, outcome</summary>
-          <div class="body">
+        <button class="more" type="button">Problem, approach, outcome</button>
+          <div class="body" hidden>
             <div><b>Problem</b>No way for customer agents to call Infoblox IQ with per-user identity and safe writes.</div>
             <div><b>What I did</b>Defined tool contracts, execution flows, per-user OAuth and human-approved writes. Reviewed authorization behaviour against the implementation and caught a defect that allowed access when checks failed, then a regression that blocked legitimate access.</div>
             <div><b>Outcome</b>Validated a Slack → IQ → ServiceNow SOC proof of concept on Kubernetes, with per-user identity and approval-gated writes.</div>
           </div>
-        </details>
       </div>
     </article>
 
@@ -328,13 +333,12 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
         <h3>Finding where the AI spend actually goes</h3>
         <p class="lede">Nobody could say what a customer's AI usage cost to serve. I built the first customer-level cost model across cloud and on-premises deployments, and the answer changed the pricing conversation.</p>
         <div class="kpis"><div><b>97%</b>of inference cost was QA traffic</div><div><b>1st</b>customer-level AI COGS model</div><div><b>2</b>deployment models covered</div></div>
-        <details><summary>Problem, approach, outcome</summary>
-          <div class="body">
+        <button class="more" type="button">Problem, approach, outcome</button>
+          <div class="body" hidden>
             <div><b>Problem</b>No attribution of inference cost to customers or traffic sources, so pricing, packaging and margin decisions were being made blind.</div>
             <div><b>What I did</b>Built the first customer-level AI COGS model across cloud and on-premises deployments, traced measured inference cost back to its sources, and documented the attribution gaps.</div>
             <div><b>Outcome</b>Showed that QA traffic accounted for 97% of measured inference cost, and turned the gaps into concrete inputs for pricing, packaging and margins.</div>
           </div>
-        </details>
       </div>
     </article>
 
@@ -357,13 +361,12 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
         <h3>Shipping a self-serve AI forecasting product from zero to one</h3>
         <p class="lede">Manufacturers and retailers were forecasting demand in spreadsheets. I led discovery, scoped the MVP, and took it to paying customers.</p>
         <div class="kpis"><div><b>€200K</b>ARR</div><div><b>22→70%</b>forecast accuracy</div><div><b>−20%</b>client safety stock</div></div>
-        <details><summary>Problem, approach, outcome</summary>
-          <div class="body">
+        <button class="more" type="button">Problem, approach, outcome</button>
+          <div class="body" hidden>
             <div><b>Problem</b>Forecast accuracy at 22% across 1,000 product time series. Onboarding a client took six weeks.</div>
             <div><b>What I did</b>Ran discovery with four domain analysts, scoped the ML-powered MVP, trained LightGBM models, onboarded the first client and tracked activation and adoption metrics.</div>
             <div><b>Outcome</b>Accuracy 22% → 70%, client safety stock down 20%, time-to-value six weeks → five days. €200K ARR.</div>
           </div>
-        </details>
       </div>
     </article>
 
@@ -503,7 +506,22 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
 </footer>
 </div>
 
+<dialog class="cs-dialog" id="cs-dialog"><div class="inner"><button class="x" type="button" aria-label="Close">×</button><div class="tag"></div><h3></h3><div class="body"></div></div></dialog>
 <script>
+(function(){
+  var d=document.getElementById('cs-dialog'); if(!d||!d.showModal) return;
+  document.querySelectorAll('.cs .more').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var cs=btn.closest('.cs');
+      d.querySelector('.tag').innerHTML=cs.querySelector('.tag').innerHTML;
+      d.querySelector('h3').textContent=cs.querySelector('h3').textContent;
+      d.querySelector('.body').innerHTML=cs.querySelector('.body').innerHTML;
+      d.showModal();
+    });
+  });
+  d.querySelector('.x').addEventListener('click',function(){d.close()});
+  d.addEventListener('click',function(e){if(e.target===d)d.close()});
+})();
 (function(){
   var b=document.getElementById('theme'),r=document.documentElement;
   function get(){try{return localStorage.getItem('theme')}catch(e){return null}}
