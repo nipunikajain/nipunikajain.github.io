@@ -60,7 +60,7 @@ nav>.wrap>*{pointer-events:auto}
 
 .hero{position:relative;overflow:hidden;border-bottom:1px solid var(--line)}
 .hero::before{content:"";position:absolute;inset:0;background:url(img/hero-wash.svg) center/cover no-repeat;opacity:var(--wash);pointer-events:none}
-.hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;padding-top:64px;padding-bottom:72px}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center;padding-top:64px;padding-bottom:96px}
 .hero h1{font-size:clamp(30px,4vw,50px);font-weight:600;letter-spacing:-.025em;line-height:1.1}
 .hero h1 span{color:var(--ink-2);font-weight:500}
 .hero .sub{color:var(--ink-2);font-size:17px;margin-top:22px;max-width:520px}
@@ -71,11 +71,14 @@ nav>.wrap>*{pointer-events:auto}
 .links a.primary{background:var(--ink);color:var(--bg);border-color:var(--ink)}
 
 section{padding:64px 0}
-.glance{display:grid;grid-template-columns:repeat(4,1fr);border-bottom:1px solid var(--line)}
-.glance>div{padding:22px 20px 22px 0}
-.glance>div+div{padding-left:24px;border-left:1px solid var(--line)}
-.glance .k{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
-.glance .v{font-weight:500;margin-top:6px}
+.glance{display:grid;grid-template-columns:1fr 2fr 1fr 1fr;gap:16px;margin-top:-34px;position:relative;z-index:2}
+.gc{background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:18px 20px;box-shadow:0 1px 2px rgba(0,0,0,.04),0 12px 32px -20px rgba(0,0,0,.25)}
+.gc .k{display:flex;align-items:center;gap:8px;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:12px}
+.gc .k svg{width:16px;height:16px;stroke:var(--series);fill:none;stroke-width:1.75;stroke-linecap:round;stroke-linejoin:round}
+.gc .v{font-weight:500;font-size:15px;line-height:1.4}
+.gc .v small{display:block;font-weight:400;color:var(--muted);font-size:13px;margin-top:2px}
+.gc .chips{display:flex;flex-wrap:wrap;gap:6px}
+.gc .chips span{font-size:13px;padding:5px 11px;border-radius:999px;background:var(--bg);border:1px solid var(--line);color:var(--ink)}
 
 .cases{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:24px}
 .cs{display:flex;flex-direction:column;border:1px solid var(--line);border-radius:22px;overflow:hidden;background:var(--surface)}
@@ -185,11 +188,8 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
   .edu-grid{grid-template-columns:1fr}
   .hero .wrap{grid-template-columns:1fr;gap:36px;padding-top:40px;padding-bottom:56px;min-height:0}
   .hero .photo{order:-1;justify-self:start;width:176px;aspect-ratio:1/1;border-radius:18px}
-  .glance{grid-template-columns:1fr 1fr}
-  .glance>div{padding:16px 12px 16px 0}
-  .glance>div+div{padding-left:16px}
-  .glance>div:nth-child(3){border-left:0;padding-left:0;border-top:1px solid var(--line)}
-  .glance>div:nth-child(4){border-top:1px solid var(--line)}
+  .glance{grid-template-columns:1fr 1fr;gap:12px;margin-top:-20px}
+  .gc.wide{grid-column:1/-1}
   .cases{grid-template-columns:minmax(0,1fr)}
   .vis{min-height:0;padding:24px}
   .cs .txt{padding:26px 24px 28px}
@@ -232,11 +232,12 @@ footer .fine{color:var(--muted);font-size:13px;margin-top:28px}
 
 <div class="wrap">
 <div class="glance">
-  <div><div class="k">Now</div><div class="v">Senior AI PM, Infoblox IQ</div></div>
-  <div><div class="k">Focus</div><div class="v">AI agents, guardrails, enterprise SaaS</div></div>
-  <div><div class="k">Education</div><div class="v">MBA, UBC Sauder · B.Tech</div></div>
-  <div><div class="k">Location</div><div class="v">Vancouver · eligible to work in Canada</div></div>
+  <div class="gc"><div class="k"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="18" height="13" rx="2"/><path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2M3 12h18"/></svg>Now</div><div class="v">Senior AI Product Manager<small>Infoblox IQ · AI assistant &amp; agent platform</small></div></div>
+  <div class="gc wide"><div class="k"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2"/></svg>Focus</div><div class="chips"><span>AI agents &amp; MCP</span><span>Evals &amp; guardrails</span><span>0→1 products</span><span>Enterprise SaaS</span><span>Platform &amp; APIs</span><span>Pricing &amp; COGS</span><span>Data &amp; ML systems</span><span>Go-to-market</span></div></div>
+  <div class="gc"><div class="k"><svg viewBox="0 0 24 24"><path d="M2 9l10-5 10 5-10 5z"/><path d="M6 11v5c0 1.5 3 3 6 3s6-1.5 6-3v-5M22 9v6"/></svg>Education</div><div class="v">MBA, UBC Sauder<small>B.Tech, NMIMS Mumbai</small></div></div>
+  <div class="gc"><div class="k"><svg viewBox="0 0 24 24"><path d="M12 21s7-6.2 7-11a7 7 0 0 0-14 0c0 4.8 7 11 7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>Location</div><div class="v">Vancouver, BC<small>Eligible to work in Canada</small></div></div>
 </div>
+
 
 <section id="cases">
   <div class="sec"><div><div class="eyebrow">01</div><h2>Shipped at work</h2></div><p class="sub">Four projects, each with the problem, what I did, and the number that moved.</p></div>
